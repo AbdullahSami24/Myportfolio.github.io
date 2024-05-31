@@ -58,8 +58,8 @@
             <h1 class="display-4 fw-bold" data-aos="fade-right">I'M A <span class="text-brand">MUSIC COMPOSER & VIDEOGRAPHER</span> FROM BANGLADESH</h1>
             <p class="lead mt-2 mb-4" data-aos="fade-left">I am Abdullah Al Hossain Sami,And I craft symphonies for the ears and visual for the soul, I blend the art of music and videography to create unforgettable experiences.</p>
             <div data-aos="fade-right">
-              <a href="#work" class="btn btn-brand px-lg-5 m-4">Explore</a>
-            <a href="#" class="link-custom">Contact</a>
+              <a href="#works" class="btn btn-brand px-lg-5 m-4">Explore</a>
+            <a href="#contact" class="link-custom">Contact</a>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@
               <div class="row gy-4">
                 
 
-                <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                <div class="col-12" data-aos="zoom-in-up" data-aos-delay="200">
                   <div class="bg-base p-4 rounded-4 shadow-effect">
                     <h4>Secondary School Certificate</h4>
                     <p class="text-brand mb-2">Bangladesh Gas Fields School & College (2009-2020)</p>
@@ -230,7 +230,7 @@
                   </div>
                 </div>
                 
-                <div class="col-12" data-aos="fade-right" data-aos-delay="300">
+                <div class="col-12" data-aos="zoom-in-up" data-aos-delay="300">
                   <div class="bg-base p-4 rounded-4 shadow-effect">
                     <h4>Higher Secondary Certificate</h4>
                     <p class="text-brand mb-2">Birsreshtha Noor Mohammad Public College (2020-2022)</p>
@@ -238,7 +238,7 @@
                   </div>
                 </div>
                 
-                <div class="col-12" data-aos="fade-right" data-aos-delay="400">
+                <div class="col-12" data-aos="zoom-in-up" data-aos-delay="400">
                   <div class="bg-base p-4 rounded-4 shadow-effect">
                     <h4>Bachelor Of Business Administration</h4>
                     <p class="text-brand mb-2">University Of Rajshahi(2023-Present)</p>
@@ -300,7 +300,7 @@
         
 
          <div class="col-lg-8 "data-aos="fade-up" data-aos-delay=100>
-           <form action="#" class="row g-lg-3 gy-3 " data-aos="fade-up">
+           <form onsubmit="sendEmail(); reset(); return false;" action="#" class="row g-lg-3 gy-3 " data-aos="fade-up">
              <div class="form-group col-md-6">
                <input type="text" class="form-control" placeholder="Enter Your Name">
              </div>
@@ -321,6 +321,25 @@
            </form>
         </div>   
       </div>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script >
+        function sendEmail(){
+          Email.send({
+             Host : "smtp.gmail.com",
+             Username : "hirohamada29660@gmail.com",
+             Password : "faiza2410",
+             To : 'hirohamada29660@gmail.com',
+             From : document.getElementById("email").value,
+             Subject : "New Contact From Enquiry",
+             Body : "Name:" + document.getElementById("Enter Your Name").value
+                 + "<br> Email: " + document.getElementById("Enter Your Email").value
+                 + "<br> Subject: " + document.getElementById("Enter Subject").value
+                 + "<br> Message: " + document.getElementById("Enter Your Message").value
+          }).then(
+          message => alert("Message Sent Succesfully")
+          ); 
+        }
+      </script>
 
         
       </div>
